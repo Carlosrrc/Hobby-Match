@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Match MVP Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hobby Match MVP Prototype</h1>
+        <nav>
+            <ul>
+                <li><a href="#identity-verification">Identity Verification</a></li>
+                <li><a href="#personality-test">Personality Test</a></li>
+                <li><a href="#identifying-interests">Identifying Interests</a></li>
+                <li><a href="#group-chats">Group Chats</a></li>
+                <li><a href="#suggested-activities">Suggested Activities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="identity-verification">
+        <h2>Identity Verification</h2>
+        <p>This page will guide users through the identity verification process to ensure a secure environment for all members. Users will need to upload a government-issued ID and provide verification details.</p>
+        <form>
+            <label for="id-upload">Upload ID:</label>
+            <input type="file" id="id-upload" name="id-upload" required><br>
+            <label for="photo">Take a selfie for verification:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" capture="user" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="personality-test">
+        <h2>Personality Test</h2>
+        <p>This section allows users to take a short personality test, which will be used to help match them with others who share similar traits and interests.</p>
+        <form>
+            <p>How do you prefer to spend your free time?</p>
+            <input type="radio" name="free-time" value="outdoors" required> Outdoors<br>
+            <input type="radio" name="free-time" value="indoors"> Indoors<br>
+            <input type="radio" name="free-time" value="with-friends"> With Friends<br>
+            <input type="radio" name="free-time" value="alone"> Alone<br>
+            <button type="submit">Complete Test</button>
+        </form>
+    </section>
+
+    <section id="identifying-interests">
+        <h2>Identifying Interests</h2>
+        <p>Here, users can select their hobbies and interests to help us personalize their connections.</p>
+        <form>
+            <label for="interests">Select your interests:</label><br>
+            <select id="interests" name="interests" multiple>
+                <option value="sports">Sports</option>
+                <option value="art">Art</option>
+                <option value="music">Music</option>
+                <option value="cooking">Cooking</option>
+                <option value="travel">Travel</option>
+            </select><br>
+            <button type="submit">Save Interests</button>
+        </form>
+    </section>
+
+    <section id="group-chats">
+        <h2>Group Chats</h2>
+        <p>This section enables users to join group chats based on their hobbies or interests to connect with like-minded individuals.</p>
+        <div id="chat-rooms">
+            <h3>Available Group Chats:</h3>
+            <ul>
+                <li><a href="#">Art Lovers Group</a></li>
+                <li><a href="#">Travel Enthusiasts</a></li>
+                <li><a href="#">Cooking Club</a></li>
+                <li><a href="#">Music Fans</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="suggested-activities">
+        <h2>Suggested Activities</h2>
+        <p>Based on their interests, users will receive suggestions for activities they can participate in, both online and offline.</p>
+        <ul>
+            <li>Join a local painting class.</li>
+            <li>Attend an online music jam session.</li>
+            <li>Sign up for a weekend hiking trip.</li>
+            <li>Participate in a virtual cooking contest.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hobby Match. All rights reserved.</p>
+    </footer>
+</body>
+</html>
