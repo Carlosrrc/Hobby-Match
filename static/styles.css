@@ -1,47 +1,120 @@
-header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+/* General Styles */
+body {
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background-color: #6200ea;
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
+.header-content h1 {
+    font-size: 1.5em;
     margin: 0;
-    font-size: 1.6em;
 }
 
 .menu-toggle {
     background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav {
+    background-color: #3700b3;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    padding: 10px 0;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+}
+
+/* Hide Navigation by Default */
+.hidden {
+    display: none;
+}
+
+/* Main Content Section */
+.main-section {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #6200ea;
+}
+
+.cta-button {
+    background-color: #6200ea;
     color: white;
     border: none;
-    padding: 5px;
+    padding: 15px 20px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 1.8em;
-    position: relative;
-    z-index: 1001;
-    border-radius: 50%;
-    box-shadow: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
 }
 
+.cta-button:hover {
+    background-color: #3700b3;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Specific Adjustments */
 @media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 1.2em;
+    .header h1 {
+        font-size: 1.4em;
     }
+
+    .main-section {
+        margin: 15px;
+        padding: 15px;
+    }
+
     .menu-toggle {
         font-size: 1.6em;
-        padding: 5px;
     }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

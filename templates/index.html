@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobby Match - Welcome</title>
-    <link href="{{ url_for('static', filename='tailwind-output.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
 </head>
-<body class="bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen flex flex-col items-center justify-center p-4">
+<body>
 
-    <header class="w-full bg-gradient-to-r from-indigo-500 to-blue-500 p-4 rounded-lg shadow-lg text-white text-center flex justify-between items-center">
-        <h1 class="text-xl font-bold">Hobby Match</h1>
-        <button id="menu-toggle" class="bg-blue-600 p-2 rounded-md">☰</button>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Hobby Match</h1>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+        </div>
+        <nav id="main-nav" class="nav hidden">
+            <ul>
+                <li><a href="/personality-test">Personality Test</a></li>
+                <li><a href="/interests">Interests</a></li>
+                <li><a href="/group-chats">Group Chats</a></li>
+                <li><a href="/suggested-activities">Suggested Activities</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav id="main-nav" class="hidden mt-4">
-        <ul class="bg-blue-500 text-white p-4 rounded-md shadow-lg">
-            <li class="p-2"><a href="/personality-test" class="block text-lg hover:bg-blue-700 rounded-md">Personality Test</a></li>
-            <li class="p-2"><a href="/interests" class="block text-lg hover:bg-blue-700 rounded-md">Interests</a></li>
-            <li class="p-2"><a href="/group-chats" class="block text-lg hover:bg-blue-700 rounded-md">Group Chats</a></li>
-            <li class="p-2"><a href="/suggested-activities" class="block text-lg hover:bg-blue-700 rounded-md">Suggested Activities</a></li>
-        </ul>
-    </nav>
-
-    <section class="bg-white p-6 rounded-lg shadow-lg mt-8 w-full max-w-md">
-        <h2 class="text-2xl font-semibold mb-4">Welcome to Hobby Match!</h2>
-        <img src="{{ url_for('static', filename='images/welcome.jpg') }}" alt="Welcome Image" class="w-full rounded-lg mb-4">
-        <p class="text-gray-700 mb-4">Connect with people who share your hobbies and interests!</p>
-        <button onclick="location.href='/personality-test'" class="bg-indigo-500 text-white py-2 px-4 rounded-lg w-full transition duration-300 hover:bg-indigo-700">Start Personality Test</button>
+    <!-- Main Content Section -->
+    <section class="main-section">
+        <h2>Welcome to Hobby Match!</h2>
+        <p>Connect with people who share your hobbies and interests!</p>
+        <button class="cta-button" onclick="location.href='/personality-test'">Start Personality Test</button>
     </section>
 
-    <footer class="mt-auto p-4 text-center text-white bg-indigo-500 w-full rounded-lg shadow-lg">
+    <!-- Footer Section -->
+    <footer class="footer">
         <p>&copy; 2024 Hobby Match. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const menuToggle = document.getElementById("menu-toggle");
