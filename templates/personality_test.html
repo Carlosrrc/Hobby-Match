@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Match - Personality Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Personality Test</h1>
+        <button id="menu-toggle">☰ Menu</button>
+        <nav id="main-nav" class="hidden">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/personality-test">Personality Test</a></li>
+                <li><a href="/interests">Interests</a></li>
+                <li><a href="/group-chats">Group Chats</a></li>
+                <li><a href="/suggested-activities">Suggested Activities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="personality-test-section">
+        <h2>Discover Your Personality</h2>
+        <img src="{{ url_for('static', filename='images/personality_test.jpg') }}" alt="Personality Test" style="width: 100%; border-radius: 15px;">
+        <p>Answer a few questions to help us match you with others who share similar interests.</p>
+        <form method="post" action="/personality-test">
+            <p>How do you prefer to spend your free time?</p>
+            <div class="options">
+                <input type="radio" id="outdoors" name="free-time" value="outdoors" required>
+                <label for="outdoors">Outdoors</label><br>
+                <input type="radio" id="indoors" name="free-time" value="indoors">
+                <label for="indoors">Indoors</label><br>
+                <input type="radio" id="with-friends" name="free-time" value="with-friends">
+                <label for="with-friends">With Friends</label><br>
+                <input type="radio" id="alone" name="free-time" value="alone">
+                <label for="alone">Alone</label><br>
+            </div>
+            <button type="submit">Complete Test</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hobby Match. All rights reserved.</p>
+    </footer>
+</body>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='tailwind-output.css') }}">
+
+
+</html>

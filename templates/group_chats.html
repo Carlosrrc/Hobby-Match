@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Match - Group Chats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Group Chats</h1>
+        <button id="menu-toggle">☰ Menu</button>
+        <nav id="main-nav" class="hidden">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/personality-test">Personality Test</a></li>
+                <li><a href="/interests">Interests</a></li>
+                <li><a href="/group-chats">Group Chats</a></li>
+                <li><a href="/suggested-activities">Suggested Activities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="group-chats-section">
+        <h2>Join a Group Chat</h2>
+        <img src="{{ url_for('static', filename='images/group_chat.jpg') }}" alt="Group Chats" style="width: 100%; border-radius: 15px;">
+        <p>Join group chats based on your hobbies or interests to connect with like-minded individuals.</p>
+        <div id="chat-rooms">
+            <ul>
+                <li><a href="#">Art Lovers Group</a></li>
+                <li><a href="#">Travel Enthusiasts</a></li>
+                <li><a href="#">Cooking Club</a></li>
+                <li><a href="#">Music Fans</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hobby Match. All rights reserved.</p>
+    </footer>
+</body>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='tailwind-output.css') }}">
+
+
+</html>

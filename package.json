@@ -1,0 +1,16 @@
+{
+  "name": "hobby-match",
+  "version": "1.0.0",
+  "description": "A mobile-optimized web app using Tailwind CSS.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss build static/styles.css -o static/tailwind-output.css",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

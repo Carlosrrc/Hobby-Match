@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Match - Suggested Activities</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Suggested Activities</h1>
+        <button id="menu-toggle">☰ Menu</button>
+        <nav id="main-nav" class="hidden">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/personality-test">Personality Test</a></li>
+                <li><a href="/interests">Interests</a></li>
+                <li><a href="/group-chats">Group Chats</a></li>
+                <li><a href="/suggested-activities">Suggested Activities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="suggested-activities-section">
+        <h2>Activities Just for You</h2>
+        <img src="{{ url_for('static', filename='images/activities.jpg') }}" alt="Activities" style="width: 100%; border-radius: 15px;">
+        <p>Based on your interests, here are some activities you may enjoy:</p>
+        <ul>
+            <li>Join a local painting class.</li>
+            <li>Attend an online music jam session.</li>
+            <li>Sign up for a weekend hiking trip.</li>
+            <li>Participate in a virtual cooking contest.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hobby Match. All rights reserved.</p>
+    </footer>
+</body>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='tailwind-output.css') }}">
+  
+</html>
